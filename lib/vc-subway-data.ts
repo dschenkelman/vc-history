@@ -74,6 +74,14 @@ export const subwayLines: SubwayLine[] = [
     nodes: [],
   },
   {
+    id: "sequoia_china_line",
+    name: "Sequoia China",
+    color: "#d97706",
+    startDate: "2005-09-01", // Match Sequoia China founding
+    parentLineId: "sequoia_line",
+    nodes: [],
+  },
+  {
     id: "softbank_line",
     name: "SoftBank / Vision Fund",
     color: "#f43f5e",
@@ -99,14 +107,6 @@ export const subwayLines: SubwayLine[] = [
     name: "Y Combinator",
     color: "#f59e0b",
     startDate: "2005-03-01", // Match YC founding
-    nodes: [],
-  },
-  {
-    id: "sequoia_china_line",
-    name: "Sequoia China",
-    color: "#d97706",
-    startDate: "2005-09-01", // Match Sequoia China founding
-    parentLineId: "sequoia_line",
     nodes: [],
   },
   {
