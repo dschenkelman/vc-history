@@ -516,7 +516,9 @@ export function VcSubwayTimeline() {
       {/* Contribute Button */}
       <div className="absolute top-5 right-5 z-20">
         <Button
-          onClick={() => window.open("https://github.com/dschenkelman/vc-history/blob/main/lib/vc-subway-data.ts", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/dschenkelman/vc-history/blob/main/lib/vc-subway-data.ts", "_blank")
+          }
           className="bg-slate-800/90 hover:bg-slate-700/90 text-white border border-slate-600 backdrop-blur-sm"
           size="sm"
         >
