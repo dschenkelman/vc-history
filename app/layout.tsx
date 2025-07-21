@@ -1,9 +1,9 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "History of Venture Capital",
@@ -49,23 +49,32 @@ export const metadata: Metadata = {
   other: {
     "theme-color": "#1e293b",
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         {/* Additional meta tags for better social media support */}
-        <meta property="og:image:secure_url" content="https://vc-history.vercel.app/images/og-image.png" />
-        <meta name="twitter:image:src" content="https://vc-history.vercel.app/images/og-image.png" />
+        <meta
+          property="og:image:secure_url"
+          content="https://vc-history.vercel.app/images/og-image.png"
+        />
+        <meta
+          name="twitter:image:src"
+          content="https://vc-history.vercel.app/images/og-image.png"
+        />
 
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HZH9BMR7E"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4HZH9BMR7E"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -90,8 +99,8 @@ export default function RootLayout({
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web Browser",
               author: {
-                "@type": "Organization",
-                name: "VC History Project",
+                "@type": "Person",
+                name: "Damian Schenkelman",
               },
               datePublished: "2025-01-21",
               inLanguage: "en-US",
@@ -100,10 +109,15 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
