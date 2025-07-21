@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "History of Venture Capital",
     description:
       "An interactive subway-style timeline exploring the history of venture capital from 1946 to 2025. Discover the connections between major VC firms, investments, IPOs, and key milestones that shaped the industry.",
-    url: "https://vc-history.vercel.app",
+    url: "https://vchistory.vercel.app",
     siteName: "History of Venture Capital",
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     creator: "@dschenkelman",
     site: "@dschenkelman",
   },
-  metadataBase: new URL("https://vc-history.vercel.app"),
+  metadataBase: new URL("https://vchistory.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -63,11 +63,11 @@ export default function RootLayout({
         {/* Additional meta tags for better social media support */}
         <meta
           property="og:image:secure_url"
-          content="https://vc-history.vercel.app/images/og-image.png"
+          content="https://vchistory.vercel.app/images/og-image.png"
         />
         <meta
           name="twitter:image:src"
-          content="https://vc-history.vercel.app/images/og-image.png"
+          content="https://vchistory.vercel.app/images/og-image.png"
         />
 
         {/* Google Analytics */}
@@ -95,7 +95,7 @@ export default function RootLayout({
               name: "History of Venture Capital",
               description:
                 "An interactive subway-style timeline exploring the history of venture capital from 1946 to 2025",
-              url: "https://vc-history.vercel.app",
+              url: "https://vchistory.vercel.app",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web Browser",
               author: {
