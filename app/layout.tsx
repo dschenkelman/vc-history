@@ -27,6 +27,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "History of Venture Capital - Interactive Timeline",
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
       "An interactive subway-style timeline exploring the history of venture capital from 1946 to 2025. Discover the connections between major VC firms, investments, IPOs, and key milestones.",
     images: ["/og-image.png"],
     creator: "@vchistory",
+    site: "@vchistory",
   },
   metadataBase: new URL("https://vc-history.vercel.app"),
   alternates: {
@@ -58,6 +60,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
+        {/* Additional meta tags for better social media support */}
+        <meta property="og:image:secure_url" content="https://vc-history.vercel.app/og-image.png" />
+        <meta name="twitter:image:src" content="https://vc-history.vercel.app/og-image.png" />
+
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HZH9BMR7E"></script>
         <script
