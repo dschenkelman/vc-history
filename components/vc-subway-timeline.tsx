@@ -5,6 +5,8 @@ import { useRef, useEffect, useState, useCallback } from "react"
 import { subwayLines, subwayNodes } from "@/lib/vc-subway-data"
 import type { SubwayNode } from "@/lib/vc-subway-data"
 import { dateToX } from "@/lib/vc-subway-utils"
+import { Button } from "@/components/ui/button"
+import { GitBranch } from "lucide-react"
 
 // Constants
 const MIN_ZOOM = 0.05
@@ -510,6 +512,18 @@ export function VcSubwayTimeline() {
       onClick={handleClick}
     >
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
+
+      {/* Contribute Button */}
+      <div className="absolute top-5 right-5 z-20">
+        <Button
+          onClick={() => window.open("https://github.com/dschenkelman/vc-history/blob/main/lib/vc-subway-data.ts", "_blank")}
+          className="bg-slate-800/90 hover:bg-slate-700/90 text-white border border-slate-600 backdrop-blur-sm"
+          size="sm"
+        >
+          <GitBranch className="w-4 h-4 mr-2" />
+          Contribute
+        </Button>
+      </div>
 
       {hoveredNode && (
         <div
